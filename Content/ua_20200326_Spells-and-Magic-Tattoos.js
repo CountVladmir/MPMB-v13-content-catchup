@@ -1,4 +1,108 @@
+var iFileName = "ua_20200326_Spells-and-Magic-Tattoos.js";
+RequiredSheetVersion(13);
 
+// Define the source
+SourceList["UA:SMT"] = {
+	name : "Unearthed Arcana: Spells and Magic Tattoos",
+	abbreviation : "UA:SMT",
+	group : "Unearthed Arcana",
+	url : "https://media.wizards.com/2020/dnd/downloads/UA2020-SpellsTattoos.pdf",
+	date : "2020/03/26"
+};
+
+MagicItemsList["absorbing tattoo"] = {
+	name : "Absorbing Tattoo",
+	source : [["UA:SMT", 8]],
+	type : "wondrous item",
+	rarity : "very rare",
+	attunement : true,
+	description : "This tattoo incorporates designs that emphasize a color. When I take damage of a type associated with the color, I can use my reaction to gain immunity against that instance of the damage, and I regain a number of hit points equal to half the damage I would have taken. I can use this reaction once per dawn.",
+	descriptionFull : "This tattoo incorporates designs that emphasize one color more than others. While the tattoo is on your skin, you have resistance to a type of damage associated with that color, as shown on the table below. The DM chooses the color or determines it randomly.\n" + toUni("d10\t\tDamage Type\tColor") + "\n1 \t\tAcid\tGreen\n2 \tCold\tBlue\n3 \tFire\tRed\n4 \tForce\tWhite\n5 \tLightning\tYellow\n6 \tNecrotic\tBlack\n7 \tPoison\tViolet\n8 \tPsychic\tSilver\n9 \tRadiant\tGold\n10\tThunder\tOrange\n" + toUni("Damage Absorption") + "  When you take damage of the chosen type, you can use your reaction to gain immunity against that instance of the damage, and you regain a number of hit points equal to half the damage you would have taken. Once this reaction is used, it can’t be used again until the next dawn.\n" + toUni("Tattoo Attunement.") + "  To attune to this item, you hold the needle to your skin where you want the tattoo to appear, pressing the needle there throughout the attunement process. When the attunement is complete, the needle turns into the ink that becomes the tattoo, which appears on the skin. If you have multiple magic tattoos, they count as a single magic item with regard to the number of magic items you can attune to.\n If your attunement to the tattoo ends, the tattoo vanishes, and the needle reappears in the closest unoccupied space to you.",
+	choices : ['Acid', 'Cold', 'Fire', 'Force', 'Lightning', 'Necrotic', 'Poison', 'Psychic', 'Radiant', 'Thunder'],
+	"acid" : {
+		name : "Acid Absorbing Tattoo",
+		description: "This tattoo incorporates designs that emphasize the color green. When I take acid damage, I can use my reaction to gain immunity against that instance of the damage, and I regain a number of hit points equal to half the damage I would have taken. I can use this reaction once per dawn.",
+		dmgres : ["Acid"],
+		limfeaname : "Absorb Acid Damage",
+		additional : "Absorbing Tattoo",
+		action : [["reaction", ""]],
+		usages : 1, 
+		recovery : "dawn"
+	},
+
+
+	"cold" : {
+		name : "Cold Absorbing Tattoo",
+		description: "This tattoo incorporates designs that emphasize the color blue. When I take cold damage, I can use my reaction to gain immunity against that instance of the damage, and I regain a number of hit points equal to half the damage I would have taken. I can use this reaction once per dawn.",
+		dmgres : ["Cold"],
+		limfeaname : "Absorb Cold Damage",
+		additional : "Absorbing Tattoo",
+		action : [["reaction", ""]],
+		usages : 1, 
+		recovery : "dawn"
+	},
+	"fire" : {
+		name : "Fire Absorbing Tattoo",
+		description: "This tattoo incorporates designs that emphasize the color red. When I take fire damage, I can use my reaction to gain immunity against that instance of the damage, and I regain a number of hit points equal to half the damage I would have taken. I can use this reaction once per dawn.",
+		dmgres : ["Fire"],
+		limfeaname : "Absorb Fire Damage",
+		additional : "Absorbing Tattoo",
+		action : [["reaction", ""]],
+		usages : 1, 
+		recovery : "dawn"
+	},
+	"force" : {
+		name : "Force Absorbing Tattoo",
+		description: "This tattoo incorporates designs that emphasize the color white. When I take force damage, I can use my reaction to gain immunity against that instance of the damage, and I regain a number of hit points equal to half the damage I would have taken. I can use this reaction once per dawn.",
+		dmgres : ["Force"],
+		limfeaname : "Absorb Force Damage",
+		additional : "Absorbing Tattoo",
+		action : [["reaction", ""]],
+		usages : 1, 
+		recovery : "dawn"
+	},
+	"lightning" : {
+		name : "Lightning Absorbing Tattoo",
+		description: "This tattoo incorporates designs that emphasize the color yellow. When I take lightning damage, I can use my reaction to gain immunity against that instance of the damage, and I regain a number of hit points equal to half the damage I would have taken. I can use this reaction once per dawn.",
+		dmgres : ["Lightning"],
+		limfeaname : "Absorb Lightning Damage",
+		additional : "Absorbing Tattoo",
+		action : [["reaction", ""]],
+		usages : 1, 
+		recovery : "dawn"
+	},
+	"necrotic" : {
+		name : "Necrotic Absorbing Tattoo",
+		description: "This tattoo incorporates designs that emphasize the color black. When I take necrotic damage, I can use my reaction to gain immunity against that instance of the damage, and I regain a number of hit points equal to half the damage I would have taken. I can use this reaction once per dawn.",
+		dmgres : ["Necrotic"],
+		limfeaname : "Absorb Necrotic Damage",
+		additional : "Absorbing Tattoo",
+		action : [["reaction", ""]],
+		usages : 1, 
+		recovery : "dawn"
+	},
+	"poison" : {
+		name : "Poison Absorbing Tattoo",
+		description: "This tattoo incorporates designs that emphasize the color violet. When I take poison damage, I can use my reaction to gain immunity against that instance of the damage, and I regain a number of hit points equal to half the damage I would have taken. I can use this reaction once per dawn.",
+		dmgres : ["Poison"],
+		limfeaname : "Absorb Poison Damage",
+		additional : "Absorbing Tattoo",
+		action : [["reaction", ""]],
+		usages : 1, 
+		recovery : "dawn"
+	},
+	"psychic" : {
+		name : "Psychic Absorbing Tattoo",
+		description: "This tattoo incorporates designs that emphasize the color silver. When I take psychic damage, I can use my reaction to gain immunity against that instance of the damage, and I regain a number of hit points equal to half the damage I would have taken. I can use this reaction once per dawn.",
+		dmgres : ["Psychic"],
+		limfeaname : "Absorb Psychic Damage",
+		additional : "Absorbing Tattoo",
+		action : [["reaction", ""]],
+		usages : 1, 
+		recovery : "dawn"
+	},
+	"radiant" : {
+		name : "Radiant Absorbing Tattoo",
 		description: "This tattoo incorporates designs that emphasize the color gold. When I take radiant damage, I can use my reaction to gain immunity against that instance of the damage, and I regain a number of hit points equal to half the damage I would have taken. I can use this reaction once per dawn.",
 		dmgres : ["Radiant"],
 		limfeaname : "Absorb Radiant Damage",
@@ -28,24 +132,24 @@ MagicItemsList["barrier tattoo"] = {
 	descriptionFull : "This tattoo depicts protective imagery and uses ink that resembles liquid metal. While you aren’t wearing armor, the tattoo grants you an Armor Class depending on the tattoo’s rarity, as shown below. You can use a shield and still gain this benefit.\n" + toUni("Rarity\t\tAC") + "\nUncommon \t\t12 + your Dexterity modifier\nRare \t15 + your Dexterity modifier (maximum of +2)\nVery Rare \t18\n" + toUni("Tattoo Attunement.") + "  To attune to this item, you hold the needle to your skin where you want the tattoo to appear, pressing the needle there throughout the attunement process. When the attunement is complete, the needle turns into the ink that becomes the tattoo, which appears on the skin. If you have multiple magic tattoos, they count as a single magic item with regard to the number of magic items you can attune to.\n If your attunement to the tattoo ends, the tattoo vanishes, and the needle reappears in the closest unoccupied space to you.",
 	choices : ["Uncommon", "Rare", "Very Rare"],
 	"uncommon" : {
-		name : "Barrier Tattoo",
+		name : "Barrier Tattoo (Uncommon)",
 		description : "This tattoo depicts protective imagery and uses ink that resembles liquid metal. While I am not wearing armor, the tattoo grants me an Armor Class of 12 + my Dexterity modifier. I can use a shield and still gain this benefit.",
-		addArmor: "Barrier Tattoo",
+		addArmor: "Barrier Tattoo (Uncommon)",
 		armorOptions: {
 			regExpSearch: /^(?=.*barrier)(?=.*(tattoo)).*$/i,
-			name : "Barrier Tattoo",
+			name : "Barrier Tattoo (Uncommon)",
 			source : [["UA:SMT", 9]],
 			type: "",
 			ac : 12,
 		},
 	},
 	"rare" : {
-		name : "Barrier Tattoo",
+		name : "Barrier Tattoo (Rare)",
 		description : "This tattoo depicts protective imagery and uses ink that resembles liquid metal. While I am not wearing armor, the tattoo grants me an Armor Class of 15 + my Dexterity modifier (maximum of +2). I can use a shield and still gain this benefit.",
-		addArmor: "Barrier Tattoo",
+		addArmor: "Barrier Tattoo (Rare)",
 		armorOptions: {
 			regExpSearch: /^(?=.*barrier)(?=.*(tattoo)).*$/i,
-			name : "Barrier Tattoo",
+			name : "Barrier Tattoo (Rare)",
 			source : [["UA:SMT", 9]],
 			type: "",
 			ac : 15,
@@ -53,19 +157,20 @@ MagicItemsList["barrier tattoo"] = {
 		},
 	},
 	"very rare" : {
-		name : "Barrier Tattoo",
+		name : "Barrier Tattoo (Very Rare)",
 		description : "This tattoo depicts protective imagery and uses ink that resembles liquid metal. While I am not wearing armor, the tattoo grants me an Armor Class of 18. I can use a shield and still gain this benefit.",
-		addArmor: "Barrier Tattoo",
+		addArmor: "Barrier Tattoo (Very Rare)",
 		armorOptions: {
 			regExpSearch: /^(?=.*barrier)(?=.*(tattoo)).*$/i,
-			name : "Barrier Tattoo",
+			name : "Barrier Tattoo (Very Rare)",
 			source : [["UA:SMT", 9]],
 			type: "",
 			ac : 18,
-			dex : 0
+			dex : 0,
 		},
 	}
 }
+
 MagicItemsList["coiling grasp tattoo"] = {
 	name : "Coiling Grasp Tattoo",
 	source : [["UA:SMT", 9]],
