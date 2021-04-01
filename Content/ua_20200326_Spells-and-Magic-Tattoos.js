@@ -132,24 +132,24 @@ MagicItemsList["barrier tattoo"] = {
 	descriptionFull : "This tattoo depicts protective imagery and uses ink that resembles liquid metal. While you aren’t wearing armor, the tattoo grants you an Armor Class depending on the tattoo’s rarity, as shown below. You can use a shield and still gain this benefit.\n" + toUni("Rarity\t\tAC") + "\nUncommon \t\t12 + your Dexterity modifier\nRare \t15 + your Dexterity modifier (maximum of +2)\nVery Rare \t18\n" + toUni("Tattoo Attunement.") + "  To attune to this item, you hold the needle to your skin where you want the tattoo to appear, pressing the needle there throughout the attunement process. When the attunement is complete, the needle turns into the ink that becomes the tattoo, which appears on the skin. If you have multiple magic tattoos, they count as a single magic item with regard to the number of magic items you can attune to.\n If your attunement to the tattoo ends, the tattoo vanishes, and the needle reappears in the closest unoccupied space to you.",
 	choices : ["Uncommon", "Rare", "Very Rare"],
 	"uncommon" : {
-		name : "Barrier Tattoo",
+		name : "Barrier Tattoo (Uncommon)",
 		description : "This tattoo depicts protective imagery and uses ink that resembles liquid metal. While I am not wearing armor, the tattoo grants me an Armor Class of 12 + my Dexterity modifier. I can use a shield and still gain this benefit.",
-		addArmor: "Barrier Tattoo",
+		addArmor: "Barrier Tattoo (Uncommon)",
 		armorOptions: {
 			regExpSearch: /^(?=.*barrier)(?=.*(tattoo)).*$/i,
-			name : "Barrier Tattoo",
+			name : "Barrier Tattoo (Uncommon)",
 			source : [["UA:SMT", 9]],
 			type: "",
 			ac : 12,
 		},
 	},
 	"rare" : {
-		name : "Barrier Tattoo",
+		name : "Barrier Tattoo (Rare)",
 		description : "This tattoo depicts protective imagery and uses ink that resembles liquid metal. While I am not wearing armor, the tattoo grants me an Armor Class of 15 + my Dexterity modifier (maximum of +2). I can use a shield and still gain this benefit.",
-		addArmor: "Barrier Tattoo",
+		addArmor: "Barrier Tattoo (Rare)",
 		armorOptions: {
 			regExpSearch: /^(?=.*barrier)(?=.*(tattoo)).*$/i,
-			name : "Barrier Tattoo",
+			name : "Barrier Tattoo (Rare)",
 			source : [["UA:SMT", 9]],
 			type: "",
 			ac : 15,
@@ -157,19 +157,20 @@ MagicItemsList["barrier tattoo"] = {
 		},
 	},
 	"very rare" : {
-		name : "Barrier Tattoo",
+		name : "Barrier Tattoo (Very Rare)",
 		description : "This tattoo depicts protective imagery and uses ink that resembles liquid metal. While I am not wearing armor, the tattoo grants me an Armor Class of 18. I can use a shield and still gain this benefit.",
-		addArmor: "Barrier Tattoo",
+		addArmor: "Barrier Tattoo (Very Rare)",
 		armorOptions: {
 			regExpSearch: /^(?=.*barrier)(?=.*(tattoo)).*$/i,
-			name : "Barrier Tattoo",
+			name : "Barrier Tattoo (Very Rare)",
 			source : [["UA:SMT", 9]],
 			type: "",
 			ac : 18,
-			dex : 0
+			dex : 0,
 		},
 	}
 }
+
 MagicItemsList["coiling grasp tattoo"] = {
 	name : "Coiling Grasp Tattoo",
 	source : [["UA:SMT", 9]],

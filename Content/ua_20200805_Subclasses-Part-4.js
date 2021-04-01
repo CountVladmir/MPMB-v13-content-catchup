@@ -139,7 +139,7 @@ AddSubClass("warlock","the undead",{
 		"subclassfeature6" : {
 			name : "Grave Touched",
 			source : [["UA:SP4", 3]],
-			minlevel : 3,
+			minlevel : 6,
 			description : desc([
 				"I no longer need to eat, drink, or breathe; when I hit a creature with an attack and roll", 
                 "damage, I can replace the damage type with necrotic damage. While I am using my Form of",
